@@ -4,18 +4,16 @@ import java.util.Scanner;
 
 public class BasicCoreProgram {
     public static void main(String[] args) {
-        System.out.println("Enter The 4 Digit year");
-        Scanner Sc =new Scanner(System.in);
-        int year = Sc.nextInt();
-        if (year < 999){
-            System.out.println("invalid input");
-            return;
-        }
-        if (year % 4 == 0){
-            System.out.println(year + " Is a leap year:");
-        }
-        else {
-            System.out.println(year + " Is not a leap year:");
+        System.out.println("Enter a Number In the range of: 0 <= Number < 31");
+        Scanner Sc = new Scanner(System.in);
+        int n = Sc.nextInt(); // n is the number of power
+        int i = 0;
+        // ith power of 2
+        int power_of_two = 1;
+        while (i <= n){
+            System.out.println(i + " " + power_of_two);
+            power_of_two = 2 * power_of_two;
+            i++;
         }
     }
 }

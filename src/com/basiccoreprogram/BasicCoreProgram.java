@@ -4,28 +4,18 @@ import java.util.Scanner;
 
 public class BasicCoreProgram {
     public static void main(String[] args) {
-        // INITIALIZATION
-        int n, head_cnt = 0, tail_cnt = 0;
-        double heads, tails;
-
-        Scanner sc = new Scanner(System.in);
-
-        // INPUT DATA
-        System.out.print("enter number of times you want to flip the coin: ");
-        n = sc.nextInt();
-
-        // COMPUTATION
-        for (int i = 0; i < n; i++) {
-            double random = Math.random();
-            if (random < 0.5)
-                tail_cnt++;
-            else
-                head_cnt++;
+        System.out.println("Enter The 4 Digit year");
+        Scanner Sc =new Scanner(System.in);
+        int year = Sc.nextInt();
+        if (year < 999){
+            System.out.println("invalid input");
+            return;
         }
-
-        heads = head_cnt / (double) n * 100;
-        tails = tail_cnt / (double) n * 100;
-        System.out.println("Percentage of heads: " + heads + "%");
-        System.out.println("Percentage of tails: " + tails + "%");
+        if (year % 4 == 0){
+            System.out.println(year + " Is a leap year:");
+        }
+        else {
+            System.out.println(year + " Is not a leap year:");
+        }
     }
 }

@@ -4,16 +4,14 @@ import java.util.Scanner;
 
 public class BasicCoreProgram {
     public static void main(String[] args) {
-        System.out.println("Enter a Number In the range of: 0 <= Number < 31");
+        double nthHarmonic = 0;
+        System.out.println("Enter a number");
         Scanner Sc = new Scanner(System.in);
-        int n = Sc.nextInt(); // n is the number of power
-        int i = 0;
-        // ith power of 2
-        int power_of_two = 1;
-        while (i <= n){
-            System.out.println(i + " " + power_of_two);
-            power_of_two = 2 * power_of_two;
-            i++;
+        int N = Sc.nextInt();
+        // Loop to apply formula
+        for (int i = 1; i <= N; i++){
+            nthHarmonic += (float)1/i;
         }
+        System.out.println("Nth Harmonic Value is: " + nthHarmonic);
     }
 }

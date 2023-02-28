@@ -4,19 +4,13 @@ import java.util.Scanner;
 
 public class BasicCoreProgram {
     public static void main(String[] args) {
-        int number;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number:");
-        number = sc.nextInt();
-
-        for(int i = 2; i < number; i++) {
-            while(number%i == 0) {
-                System.out.println(i+" ");
-                number = number/i;
-            }
-        }
-        if(number > 2) {
-            System.out.println(number);
-        }
+        System.out.println("Enter Dividend and divisor:");
+        Scanner Sc = new Scanner(System.in);
+        int dividend = Sc.nextInt();
+        int divisor = Sc.nextInt();
+        double quotient = dividend / divisor;
+        double remainder = dividend % divisor;
+        System.out.println("The Quotient is: " + quotient);
+        System.out.println("The Remainder is: " + remainder);
     }
 }

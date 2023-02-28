@@ -4,15 +4,20 @@ import java.util.Scanner;
 
 public class BasicCoreProgram {
     public static void main(String[] args) {
-        // Taking user input
         Scanner Sc = new Scanner(System.in);
-        System.out.println("Enter An Alphabet: ");
-        char alphabet = Sc.next().charAt(0);
-        if (alphabet == 'a' || alphabet == 'e' || alphabet == 'i' || alphabet == 'o' || alphabet == 'u' ||alphabet == 'A' || alphabet == 'E' || alphabet == 'I' || alphabet == 'O' || alphabet == 'U'){
-            System.out.println("Alphabet is Vowel:");
+        System.out.println("Enter Three Number:");
+        int number1 = Sc.nextInt();
+        int number2 = Sc.nextInt();
+        int number3 = Sc.nextInt();
+
+        if (number1 >= number2 && number1 >= number3){
+            System.out.println(number1 + " is the Largest Number:");
+        } else if (number2 >= number1 && number2 >= number3) {
+            System.out.println(number2 + " Is the Largest Numbar:");
+
         }
         else {
-            System.out.println("Alphabet is Consonant");
+            System.out.println(number3 + " Is the Largest Number:");
         }
     }
 }
